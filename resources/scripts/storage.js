@@ -8,6 +8,37 @@ const AuctionStorage = {
         return data ? JSON.parse(data) : [];
     },
 
+    // Get active auctions (not ended)
+    async getActiveAuctions() {
+        const auctions = await this.getAllAuctions();
+        const now = new Date();
+        return auctions.filter(a => !a.endTime || new Date(a.endTime) > now);
+    },
+
+    // Get ended auctions
+    async getEndedAuctions() {
+        const auctions = await this.getAllAuctions();
+        const now = new Date();
+        return auctions.filter(a => a.endTime && new Date(a.endTime) <= now);
+    },
+
+    // Check if auction has ended
+    hasEnded(auction) {
+        if (!auction.endTime) return false;
+        return new Date(auction.endTime) <= new Date();
+    },
+
+    // Get winner of an auction
+    getWinner(auction) {
+        if (!this.hasEnded(auction)) return null;
+        if (!auction.bids || auction.bids.length === 0) return null;
+        
+        // Return the bid with highest amount
+        return auction.bids.reduce((highest, bid) => 
+            bid.amount > highest.amount ? bid : highest
+        );
+    },
+
     // Save or update an auction
     async saveAuction(auction) {
         const auctions = await this.getAllAuctions();
@@ -41,6 +72,10 @@ const AuctionStorage = {
     async placeBid(auctionId, bidderName, bidderEmail, amount) {
         const auction = await this.getAuction(auctionId);
         if (!auction) throw new Error('Auction not found');
+        
+        if (this.hasEnded(auction)) {
+            throw new Error('Auction has ended');
+        }
         
         if (amount <= auction.highestBid) {
             throw new Error('Bid must be higher than current highest bid');
