@@ -36,18 +36,6 @@ function displayAuctionsAdmin() {
     return;
   }
 
-  const input = document.getElementById("endTime");
-
-  // Get current date/time + 2 days
-  const nowPlus2 = new Date(
-    Date.now() + 60 * 60 * 1000 + 2 * 24 * 60 * 60 * 1000
-  );
-
-  // Format to YYYY-MM-DDTHH:MM (datetime-local requires this)
-  const localISO = nowPlus2.toISOString().slice(0, 16);
-
-  input.value = localISO;
-
   const now = new Date();
 
   container.innerHTML = auctions
@@ -158,6 +146,13 @@ function displayAuctionsAdmin() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  const input = document.getElementById("endTime");
+  if (input) {
+    const nowPlus2 = new Date(
+      Date.now() + 2 * 24 * 60 * 60 * 1000 + 60 * 60 * 1000
+    );
+    input.value = nowPlus2.toISOString().slice(0, 16);
+  }
   const form = document.getElementById("auctionForm");
   console.log("FOUND FORM?", form);
 
