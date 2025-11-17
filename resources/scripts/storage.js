@@ -1,103 +1,88 @@
-// Auction Storage Manager
-const AuctionStorage = {
-    STORAGE_KEY: 'auctions',
+const storage = {
+  STORAGE_KEY: "auctions", // kept for compatibility where needed
 
-    // Get all auctions
-    async getAllAuctions() {
-        const data = localStorage.getItem(this.STORAGE_KEY);
-        return data ? JSON.parse(data) : [];
-    },
+  async getAllAuctions() {
+    const res = await fetch("../resources/api/getAuctions.php");
+    if (!res.ok) return [];
+    return await res.json();
+  },
 
-    // Get active auctions (not ended)
-    async getActiveAuctions() {
-        const auctions = await this.getAllAuctions();
-        const now = new Date();
-        return auctions.filter(a => !a.endTime || new Date(a.endTime) > now);
-    },
+  async getActiveAuctions() {
+    const all = await this.getAllAuctions();
+    const now = new Date();
+    return all.filter((a) => !a.endTime || new Date(a.endTime) > now);
+  },
 
-    // Get ended auctions
-    async getEndedAuctions() {
-        const auctions = await this.getAllAuctions();
-        const now = new Date();
-        return auctions.filter(a => a.endTime && new Date(a.endTime) <= now);
-    },
+  async getEndedAuctions() {
+    const all = await this.getAllAuctions();
+    const now = new Date();
+    return all.filter((a) => a.endTime && new Date(a.endTime) <= now);
+  },
 
-    // Check if auction has ended
-    hasEnded(auction) {
-        if (!auction.endTime) return false;
-        return new Date(auction.endTime) <= new Date();
-    },
+  hasEnded(auction) {
+    if (!auction || !auction.endTime) return false;
+    return new Date(auction.endTime) <= new Date();
+  },
 
-    // Get winner of an auction
-    getWinner(auction) {
-        if (!this.hasEnded(auction)) return null;
-        if (!auction.bids || auction.bids.length === 0) return null;
-        
-        // Return the bid with highest amount
-        return auction.bids.reduce((highest, bid) => 
-            bid.amount > highest.amount ? bid : highest
-        );
-    },
+  getWinner(auction) {
+    if (!this.hasEnded(auction)) return null;
+    if (!auction.bids || auction.bids.length === 0) return null;
+    return auction.bids.reduce((highest, bid) =>
+      bid.amount > highest.amount ? bid : highest
+    );
+  },
 
-    // Save or update an auction
-    async saveAuction(auction) {
-        const auctions = await this.getAllAuctions();
-        const index = auctions.findIndex(a => a.id === auction.id);
-        
-        if (index !== -1) {
-            auctions[index] = auction;
-        } else {
-            auctions.push(auction);
-        }
-        
-        localStorage.setItem(this.STORAGE_KEY, JSON.stringify(auctions));
-        return auction;
-    },
+  async saveAuction(auction) {
+    // POST to saveAuction.php with the full auction object
+    const res = await fetch("../resources/api/saveAuction.php", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(auction),
+    });
+    return await res.json();
+  },
 
-    // Get a single auction by ID
-    async getAuction(auctionId) {
-        const auctions = await this.getAllAuctions();
-        return auctions.find(a => a.id === auctionId);
-    },
+  async getAuction(auctionId) {
+    const all = await this.getAllAuctions();
+    return all.find((a) => a.id === auctionId);
+  },
 
-    // Delete an auction
-    async deleteAuction(auctionId) {
-        const auctions = await this.getAllAuctions();
-        const filtered = auctions.filter(a => a.id !== auctionId);
-        localStorage.setItem(this.STORAGE_KEY, JSON.stringify(filtered));
-        return true;
-    },
+  async deleteAuction(auctionId) {
+    // delete by loading all and saving without the id
+    const all = await this.getAllAuctions();
+    const filtered = all.filter((a) => a.id !== auctionId);
+    // save by POSTing each auction? For simplicity, we'll POST the whole list via save endpoint
+    // We'll create a simple wrapper: save a fake container that overwrites file
+    const res = await fetch("../resources/api/saveAuction.php", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ id: "__bulk_replace__", replaceAll: filtered }),
+    });
+    return await res.json();
+  },
 
-    // Place a bid
-    async placeBid(auctionId, bidderName, bidderEmail, amount) {
-        const auction = await this.getAuction(auctionId);
-        if (!auction) throw new Error('Auction not found');
-        
-        if (this.hasEnded(auction)) {
-            throw new Error('Auction has ended');
-        }
-        
-        if (amount <= auction.highestBid) {
-            throw new Error('Bid must be higher than current highest bid');
-        }
+  async placeBid(auctionId, bidderName, bidderEmail, amount) {
+    const auction = await this.getAuction(auctionId);
+    if (!auction) throw new Error("Auction not found");
+    if (this.hasEnded(auction)) throw new Error("Auction has ended");
+    if (amount <= auction.highestBid)
+      throw new Error("Bid must be higher than current highest bid");
 
-        const bid = {
-            name: bidderName,
-            email: bidderEmail,
-            amount: amount,
-            timestamp: new Date().toISOString()
-        };
+    const bid = {
+      name: bidderName,
+      email: bidderEmail,
+      amount: amount,
+      timestamp: new Date().toISOString(),
+    };
+    auction.bids = auction.bids || [];
+    auction.bids.push(bid);
+    auction.highestBid = amount;
 
-        auction.bids = auction.bids || [];
-        auction.bids.push(bid);
-        auction.highestBid = amount;
-
-        await this.saveAuction(auction);
-        return bid;
-    }
+    await this.saveAuction(auction);
+    return bid;
+  },
 };
 
-// Make it available globally
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = AuctionStorage;
-}
+// Make available for Node tests if needed
+if (typeof module !== "undefined" && module.exports)
+  module.exports = AuctionStorage;

@@ -1,0 +1,8 @@
+MailTrap_Token=""
+SMTP_HOST=sandbox.smtp.mailtrap.io
+SMTP_PORT=587
+SMTP_USER=
+SMTP_PASS=
+FROM_EMAIL=HBAuctions@helsingkrona.se
+FROM_NAME=HB Auctions
+ADMIN_PASSWORD=

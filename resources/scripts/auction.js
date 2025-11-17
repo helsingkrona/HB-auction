@@ -2,28 +2,25 @@ document.addEventListener("DOMContentLoaded", () => {
   let auctions = [];
   let countdownIntervals = {};
 
-  // Start email checking service
-  EmailService.startPeriodicCheck();
-
   // Load auctions from storage
   async function loadAuctions() {
-  // Load ALL auctions, not just active ones
-  const data = await AuctionStorage.getAllAuctions();
-  auctions = data || [];
+    // Load ALL auctions, not just active ones
+    const data = await storage.getAllAuctions();
+    auctions = data || [];
 
-  // Sort: active first, ended last
-  auctions.sort((a, b) => {
-    const aEnded = AuctionStorage.hasEnded(a);
-    const bEnded = AuctionStorage.hasEnded(b);
+    // Sort: active first, ended last
+    auctions.sort((a, b) => {
+      const aEnded = storage.hasEnded(a);
+      const bEnded = storage.hasEnded(b);
 
-    if (aEnded && !bEnded) return 1;
-    if (!aEnded && bEnded) return -1;
+      if (aEnded && !bEnded) return 1;
+      if (!aEnded && bEnded) return -1;
 
-    return 0;
-  });
+      return 0;
+    });
 
-  displayAuctions();
-}
+    displayAuctions();
+  }
 
   // Format time remaining
   function getTimeRemaining(endTime) {
@@ -64,9 +61,11 @@ document.addEventListener("DOMContentLoaded", () => {
   // Display auctions in the grid
   function displayAuctions() {
     const grid = document.getElementById("auctionList");
-    
+
     // Clear existing intervals
-    Object.values(countdownIntervals).forEach(interval => clearInterval(interval));
+    Object.values(countdownIntervals).forEach((interval) =>
+      clearInterval(interval)
+    );
     countdownIntervals = {};
 
     if (auctions.length === 0) {
@@ -78,33 +77,48 @@ document.addEventListener("DOMContentLoaded", () => {
     grid.innerHTML = ""; // clear existing
 
     auctions.forEach((auction) => {
-      const hasEnded = AuctionStorage.hasEnded(auction);
+      const hasEnded = storage.hasEnded(auction);
       const card = document.createElement("div");
-      card.className = `auction-card ${hasEnded ? 'ended' : ''}`;
-      
+      card.className = `auction-card ${hasEnded ? "ended" : ""}`;
+
       const countdownId = `countdown-${auction.id}`;
-      
+
       card.innerHTML = `
             <img src="${auction.image}" alt="${auction.title}">
             <div class="auction-info">
                 <h3>${auction.title}</h3>
-                <p class="description">${auction.description.substring(0, 100)}...</p>
+                <p class="description">${auction.description.substring(
+                  0,
+                  100
+                )}...</p>
                 <p class="highest-bid">Highest Bid: ${auction.highestBid.toLocaleString(
                   "sv-SE",
                   { style: "currency", currency: "SEK" }
                 )}</p>
                 ${
                   auction.endTime
-                    ? `<p class="time-remaining ${hasEnded ? 'ended' : ''}">
-                         <strong>${hasEnded ? '⏰ Ended' : '⏱️ Time Remaining'}:</strong> 
-                         <span id="${countdownId}">${hasEnded ? 'Auction Ended' : getTimeRemaining(auction.endTime)}</span>
+                    ? `<p class="time-remaining ${hasEnded ? "ended" : ""}">
+                         <strong>${
+                           hasEnded ? "⏰ Ended" : "⏱️ Time Remaining"
+                         }:</strong> 
+                         <span id="${countdownId}">${
+                        hasEnded
+                          ? "Auction Ended"
+                          : getTimeRemaining(auction.endTime)
+                      }</span>
                        </p>`
                     : ""
                 }
-                ${hasEnded ? '<p class="auction-ended-label">🔒 Auction Ended</p>' : ''}
+                ${
+                  hasEnded
+                    ? '<p class="auction-ended-label">🔒 Auction Ended</p>'
+                    : ""
+                }
                 <div class="button-group">
-                    <button class="btn ${hasEnded ? 'btn-secondary' : 'btn-primary'} bid-btn" ${hasEnded ? 'disabled' : ''}>
-                        ${hasEnded ? 'Bidding Closed' : 'Place Bid'}
+                    <button class="btn ${
+                      hasEnded ? "btn-secondary" : "btn-primary"
+                    } bid-btn" ${hasEnded ? "disabled" : ""}>
+                        ${hasEnded ? "Bidding Closed" : "Place Bid"}
                     </button>
                 </div>
             </div>
@@ -116,7 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
         countdownIntervals[auction.id] = setInterval(() => {
           updateCountdown(auction.id, countdownId);
         }, 1000);
-        
+
         // Initial update
         updateCountdown(auction.id, countdownId);
       }
@@ -143,13 +157,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const auction = auctions.find((a) => a.id === auctionId);
     if (!auction) return;
 
-    const hasEnded = AuctionStorage.hasEnded(auction);
-    const winner = hasEnded ? AuctionStorage.getWinner(auction) : null;
+    const hasEnded = storage.hasEnded(auction);
+    const winner = hasEnded ? storage.getWinner(auction) : null;
 
     const content = document.getElementById("detailContent");
     content.innerHTML = `
             <h2>${auction.title}</h2>
-            <img src="${auction.image}" alt="${auction.title}" class="detail-image">
+            <img src="${auction.image}" alt="${
+      auction.title
+    }" class="detail-image">
             <p><strong>Description:</strong> ${auction.description}</p>
             <p><strong>Current Highest Bid:</strong> ${auction.highestBid.toLocaleString(
               "sv-SE",
@@ -157,9 +173,11 @@ document.addEventListener("DOMContentLoaded", () => {
             )}</p>
             ${
               auction.endTime
-                ? `<p><strong>${hasEnded ? 'Ended' : 'Ends'}:</strong> ${new Date(
-                    auction.endTime
-                  ).toLocaleString("sv-SE")}</p>`
+                ? `<p><strong>${
+                    hasEnded ? "Ended" : "Ends"
+                  }:</strong> ${new Date(auction.endTime).toLocaleString(
+                    "sv-SE"
+                  )}</p>`
                 : ""
             }
             ${
@@ -199,14 +217,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const auction = auctions.find((a) => a.id === auctionId);
     if (!auction) return;
 
-    if (AuctionStorage.hasEnded(auction)) {
+    if (storage.hasEnded(auction)) {
       alert("This auction has ended. Bidding is closed.");
       return;
     }
 
     document.getElementById("bidAuctionId").value = auctionId;
     document.getElementById("bidAmount").min = auction.highestBid + 0.01;
-    document.getElementById("bidAmount").value = (auction.highestBid + 1).toFixed(2);
+    document.getElementById("bidAmount").value = (
+      auction.highestBid + 1
+    ).toFixed(2);
     document.getElementById("bidModal").style.display = "block";
   }
 
@@ -216,39 +236,34 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Submit bid form
-  document.getElementById("bidForm").addEventListener("submit", async (e) => {
-    e.preventDefault();
+  document
+    .getElementById("bidForm")
+    .addEventListener("submit", async function (event) {
+      event.preventDefault();
 
-    const auctionId = document.getElementById("bidAuctionId").value;
-    const name = document.getElementById("bidderName").value;
-    const email = document.getElementById("bidderEmail").value;
-    const amount = parseFloat(document.getElementById("bidAmount").value);
+      const auctionId = document.getElementById("bidAuctionId").value;
+      const amount = parseFloat(document.getElementById("bidAmount").value);
+      const name = document.getElementById("bidderName").value;
+      const email = document.getElementById("bidderEmail").value;
 
-    const auction = auctions.find((a) => a.id === auctionId);
-    if (!auction) return;
+      if (!auctionId) {
+        alert("No auction selected.");
+        return;
+      }
 
-    if (AuctionStorage.hasEnded(auction)) {
-      alert("This auction has ended. Bidding is closed.");
-      closeBidModal();
-      return;
-    }
+      try {
+        // Use the storage.placeBid method which handles validation
+        await storage.placeBid(auctionId, name, email, amount);
 
-    if (amount <= auction.highestBid) {
-      alert("Bid must be higher than current highest bid!");
-      return;
-    }
+        // Reload auctions to show updated data
+        await loadAuctions();
 
-    const bid = { name, email, amount, timestamp: new Date().toISOString() };
-    auction.highestBid = amount;
-    auction.bids = auction.bids || [];
-    auction.bids.push(bid);
-
-    await AuctionStorage.saveAuction(auction);
-    await loadAuctions();
-
-    alert("Bid placed successfully!");
-    closeBidModal();
-  });
+        alert("Bid placed successfully!");
+        closeBidModal();
+      } catch (error) {
+        alert(error.message);
+      }
+    });
 
   // Close buttons
   document.querySelector(".close").addEventListener("click", closeDetailModal);

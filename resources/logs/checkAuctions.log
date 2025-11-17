@@ -1,0 +1,1912 @@
+[2025-11-17 14:09:07] Loaded 3 auctions from storage.
+[2025-11-17 14:10:39] Loaded 3 auctions from storage.
+[2025-11-17 14:12:26] Loaded 3 auctions from storage.
+[2025-11-17 15:14:54] Loaded 3 auctions from storage.
+[2025-11-17 15:19:19] Loaded 3 auctions from storage.
+[2025-11-17 15:19:53] Loaded 3 auctions from storage.
+[2025-11-17 15:20:55] Loaded 3 auctions from storage.
+[2025-11-17 15:21:29] Loaded 3 auctions from storage.
+[2025-11-17 15:21:29] Changed flag set to false.
+[2025-11-17 15:21:48] Loaded 3 auctions from storage.
+[2025-11-17 15:21:48] Changed flag set to false.
+[2025-11-17 15:21:48] Starting auction check...
+[2025-11-17 15:21:48] Checking auction: auction_1763384835522, endTime: 2025-11-17T13:08:00.000Z, bids: [{"name":"Johannes","email":"johan.es171@gmail.com","amount":2,"timestamp":"2025-11-17T13:07:31.446Z"}]
+[2025-11-17 15:21:48]   End time: 2025-11-17T13:08:00.000Z (2025-11-17 13:08:00), now: 2025-11-17 14:21:48
+[2025-11-17 15:21:48]   Sending email to johan.es171@gmail.com...
+[2025-11-17 14:27:52] Loaded 3 auctions from storage.
+[2025-11-17 14:30:14] Loaded 3 auctions from storage.
+[2025-11-17 14:30:14] Checking auction: auction_1763384835522, endTime: 2025-11-17T13:08:00.000Z, bids: [{"name":"Johannes","email":"johan.es171@gmail.com","amount":2,"timestamp":"2025-11-17T13:07:31.446Z"}]
+[2025-11-17 14:30:14]   Sending email to johan.es171@gmail.com...
+[2025-11-17 14:40:08] Loaded 3 auctions from storage.
+[2025-11-17 14:40:08] Checking auction: auction_1763384835522, endTime: 2025-11-17T13:08:00.000Z, bids: [{"name":"Johannes","email":"johan.es171@gmail.com","amount":2,"timestamp":"2025-11-17T13:07:31.446Z"}]
+[2025-11-17 14:40:08]   Sending email to johan.es171@gmail.com...
+[2025-11-17 14:43:39] Cron job started.
+[2025-11-17 14:43:39] Loaded 3 auctions from storage.
+[2025-11-17 14:43:39] Checking auction: auction_1763384835522, endTime: 2025-11-17T13:08:00.000Z, bids: [{"name":"Johannes","email":"johan.es171@gmail.com","amount":2,"timestamp":"2025-11-17T13:07:31.446Z"}]
+[2025-11-17 14:43:39]   Sending email to johan.es171@gmail.com...
+[2025-11-17 14:43:39] sendMailCLI called
+[2025-11-17 14:43:39] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 14:43:39] Message prepared. Length: 0
+[2025-11-17 14:43:39] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 14:43:39] SMTP connected
+[2025-11-17 14:43:39] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 14:43:40] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 14:43:40] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 14:43:40] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 14:43:40] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 14:43:40] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:43:40] SMTP CMD: RCPT TO:<johan.es171@gmail.com> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:43:40] SMTP CMD: DATA | RESP: 354 Go ahead
+
+[2025-11-17 14:43:40] SMTP CMD: QUIT | RESP: 250 2.0.0 Ok: queued
+
+[2025-11-17 14:43:40] Email sent successfully to johan.es171@gmail.com
+[2025-11-17 14:43:40]   Email sent successfully. Winner notified.
+[2025-11-17 14:43:40] Checking auction: auction_1763386322468, endTime: 2025-11-17T13:33:00.000Z, bids: [{"name":"johannes","email":"email@test.se","amount":2,"timestamp":"2025-11-17T13:32:18.614Z"}]
+[2025-11-17 14:43:40]   Sending email to email@test.se...
+[2025-11-17 14:43:40] sendMailCLI called
+[2025-11-17 14:43:40] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 14:43:40] Message prepared. Length: 0
+[2025-11-17 14:43:40] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 14:43:40] SMTP connected
+[2025-11-17 14:43:41] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 14:43:41] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 14:43:41] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 14:43:41] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 14:43:41] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 14:43:41] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:43:41] SMTP CMD: RCPT TO:<email@test.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:43:41] SMTP CMD: DATA | RESP: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 14:43:41] Exception in sendMailCLI: SMTP error on command 'DATA': 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 14:43:41]   Failed to send email to email@test.se.
+[2025-11-17 14:43:41] Checking auction: auction_1763386364350, endTime: 2025-11-17T13:34:00.000Z, bids: [{"name":"johannes","email":"email@test.se","amount":23,"timestamp":"2025-11-17T13:33:00.211Z"}]
+[2025-11-17 14:43:41]   Sending email to email@test.se...
+[2025-11-17 14:43:41] sendMailCLI called
+[2025-11-17 14:43:41] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 14:43:41] Message prepared. Length: 0
+[2025-11-17 14:43:41] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 14:43:42] SMTP connected
+[2025-11-17 14:43:42] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 14:43:42] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 14:43:42] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 14:43:42] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 14:43:42] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 14:43:42] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:43:42] SMTP CMD: RCPT TO:<email@test.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:43:42] SMTP CMD: DATA | RESP: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 14:43:42] Exception in sendMailCLI: SMTP error on command 'DATA': 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 14:43:42]   Failed to send email to email@test.se.
+[2025-11-17 14:43:42] Updated storage with winnerNotified flags.
+[2025-11-17 14:43:42] Cron job completed. Checked 3 auctions.
+
+[2025-11-17 14:45:40] Cron job started.
+[2025-11-17 14:45:40] Loaded 3 auctions from storage.
+[2025-11-17 14:45:40] Checking auction: auction_1763384835522, endTime: 2025-11-17T13:08:00.000Z, bids: [{"name":"Johannes","email":"johan.es171@gmail.com","amount":2,"timestamp":"2025-11-17T13:07:31.446Z"}]
+[2025-11-17 14:45:40]   Winner already notified. Skipping.
+[2025-11-17 14:45:40] Checking auction: auction_1763386322468, endTime: 2025-11-17T13:33:00.000Z, bids: [{"name":"johannes","email":"email@test.se","amount":2,"timestamp":"2025-11-17T13:32:18.614Z"}]
+[2025-11-17 14:45:40]   Sending email to email@test.se...
+[2025-11-17 14:45:40] sendMailCLI called
+[2025-11-17 14:45:40] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 14:45:40] Message prepared. Length: 0
+[2025-11-17 14:45:40] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 14:45:40] SMTP connected
+[2025-11-17 14:45:40] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 14:45:41] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 14:45:41] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 14:45:41] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 14:45:41] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 14:45:41] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:45:41] SMTP CMD: RCPT TO:<email@test.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:45:41] SMTP CMD: DATA | RESP: 354 Go ahead
+
+[2025-11-17 14:45:41] SMTP CMD: QUIT | RESP: 250 2.0.0 Ok: queued
+
+[2025-11-17 14:45:41] Email sent successfully to email@test.se
+[2025-11-17 14:45:41]   Email sent successfully. Winner notified.
+[2025-11-17 14:45:41] Checking auction: auction_1763386364350, endTime: 2025-11-17T13:34:00.000Z, bids: [{"name":"johannes","email":"email@test.se","amount":23,"timestamp":"2025-11-17T13:33:00.211Z"}]
+[2025-11-17 14:45:41]   Sending email to email@test.se...
+[2025-11-17 14:45:41] sendMailCLI called
+[2025-11-17 14:45:41] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 14:45:41] Message prepared. Length: 0
+[2025-11-17 14:45:41] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 14:45:42] SMTP connected
+[2025-11-17 14:45:42] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 14:45:42] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 14:45:42] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 14:45:42] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 14:45:42] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 14:45:42] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:45:42] SMTP CMD: RCPT TO:<email@test.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:45:42] SMTP CMD: DATA | RESP: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 14:45:42] Exception in sendMailCLI: SMTP error on command 'DATA': 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 14:45:42] Failed to send email to email@test.se, retrying after 1 second...
+[2025-11-17 14:45:43] sendMailCLI called
+[2025-11-17 14:45:43] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 14:45:43] Message prepared. Length: 0
+[2025-11-17 14:45:43] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 14:45:43] SMTP connected
+[2025-11-17 14:45:44] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 14:45:44] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 14:45:44] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 14:45:44] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 14:45:44] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 14:45:44] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:45:44] SMTP CMD: RCPT TO:<email@test.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:45:44] SMTP CMD: DATA | RESP: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 14:45:44] Exception in sendMailCLI: SMTP error on command 'DATA': 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 14:45:44]   Failed to send email to email@test.se.
+[2025-11-17 14:45:44] Updated storage with winnerNotified flags.
+[2025-11-17 14:45:44] Cron job completed. Checked 3 auctions.
+
+[2025-11-17 14:46:25] sendMailCLI called
+[2025-11-17 14:46:25] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 14:46:25] Message prepared. Length: 4902
+[2025-11-17 14:46:25] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 14:46:25] SMTP connected
+[2025-11-17 14:46:25] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 14:46:25] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 14:46:25] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 14:46:25] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 14:46:26] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 14:46:26] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:46:26] SMTP CMD: RCPT TO:<email@test.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:46:26] SMTP CMD: DATA | RESP: 354 Go ahead
+
+[2025-11-17 14:46:26] SMTP CMD: QUIT | RESP: 250 2.0.0 Ok: queued
+
+[2025-11-17 14:46:26] Email sent successfully to email@test.se
+[2025-11-17 14:47:12] Cron job started.
+[2025-11-17 14:47:12] Loaded 3 auctions from storage.
+[2025-11-17 14:47:12] Checking auction: auction_1763384835522, endTime: 2025-11-17T13:08:00.000Z, bids: [{"name":"Johannes","email":"johan.es171@gmail.com","amount":2,"timestamp":"2025-11-17T13:07:31.446Z"}]
+[2025-11-17 14:47:12]   Sending email to johan.es171@gmail.com...
+[2025-11-17 14:47:12] sendMailCLI called
+[2025-11-17 14:47:12] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 14:47:12] Message prepared. Length: 0
+[2025-11-17 14:47:12] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 14:47:12] SMTP connected
+[2025-11-17 14:47:12] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 14:47:12] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 14:47:13] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 14:47:13] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 14:47:13] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 14:47:13] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:47:13] SMTP CMD: RCPT TO:<johan.es171@gmail.com> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:47:13] SMTP CMD: DATA | RESP: 354 Go ahead
+
+[2025-11-17 14:47:13] SMTP CMD: QUIT | RESP: 250 2.0.0 Ok: queued
+
+[2025-11-17 14:47:13] Email sent successfully to johan.es171@gmail.com
+[2025-11-17 14:47:13]   Email sent successfully. Winner notified.
+[2025-11-17 14:47:13] Checking auction: auction_1763386322468, endTime: 2025-11-17T13:33:00.000Z, bids: [{"name":"johannes","email":"email@test.se","amount":2,"timestamp":"2025-11-17T13:32:18.614Z"}]
+[2025-11-17 14:47:13]   Sending email to email@test.se...
+[2025-11-17 14:47:13] sendMailCLI called
+[2025-11-17 14:47:13] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 14:47:13] Message prepared. Length: 0
+[2025-11-17 14:47:13] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 14:47:13] SMTP connected
+[2025-11-17 14:47:14] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 14:47:14] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 14:47:14] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 14:47:14] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 14:47:14] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 14:47:14] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:47:14] SMTP CMD: RCPT TO:<email@test.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:47:14] SMTP CMD: DATA | RESP: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 14:47:14] Exception in sendMailCLI: SMTP error on command 'DATA': 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 14:47:14] Failed to send email to email@test.se, retrying after 1 second...
+[2025-11-17 14:47:15] sendMailCLI called
+[2025-11-17 14:47:15] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 14:47:15] Message prepared. Length: 0
+[2025-11-17 14:47:15] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 14:47:15] SMTP connected
+[2025-11-17 14:47:16] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 14:47:16] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 14:47:16] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 14:47:16] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 14:47:16] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 14:47:16] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:47:16] SMTP CMD: RCPT TO:<email@test.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:47:16] SMTP CMD: DATA | RESP: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 14:47:16] Exception in sendMailCLI: SMTP error on command 'DATA': 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 14:47:16]   Failed to send email to email@test.se.
+[2025-11-17 14:47:16] Checking auction: auction_1763386364350, endTime: 2025-11-17T13:34:00.000Z, bids: [{"name":"johannes","email":"email@test.se","amount":23,"timestamp":"2025-11-17T13:33:00.211Z"}]
+[2025-11-17 14:47:16]   Sending email to email@test.se...
+[2025-11-17 14:47:16] sendMailCLI called
+[2025-11-17 14:47:16] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 14:47:16] Message prepared. Length: 0
+[2025-11-17 14:47:16] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 14:47:16] SMTP connected
+[2025-11-17 14:47:17] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 14:47:17] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 14:47:17] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 14:47:17] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 14:47:17] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 14:47:17] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:47:17] SMTP CMD: RCPT TO:<email@test.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:47:17] SMTP CMD: DATA | RESP: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 14:47:17] Exception in sendMailCLI: SMTP error on command 'DATA': 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 14:47:17] Failed to send email to email@test.se, retrying after 1 second...
+[2025-11-17 14:47:18] sendMailCLI called
+[2025-11-17 14:47:18] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 14:47:18] Message prepared. Length: 0
+[2025-11-17 14:47:18] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 14:47:19] SMTP connected
+[2025-11-17 14:47:19] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 14:47:19] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 14:47:19] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 14:47:19] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 14:47:19] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 14:47:19] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:47:19] SMTP CMD: RCPT TO:<email@test.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:47:19] SMTP CMD: DATA | RESP: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 14:47:19] Exception in sendMailCLI: SMTP error on command 'DATA': 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 14:47:19]   Failed to send email to email@test.se.
+[2025-11-17 14:47:19] Updated storage with winnerNotified flags.
+[2025-11-17 14:47:19] Cron job completed. Checked 3 auctions.
+
+[2025-11-17 14:49:23] Cron job started.
+[2025-11-17 14:49:23] Loaded 3 auctions from storage.
+[2025-11-17 14:49:23] Checking auction: auction_1763384835522, endTime: 2025-11-17T13:08:00.000Z, bids: [{"name":"Johannes","email":"johan.es171@gmail.com","amount":2,"timestamp":"2025-11-17T13:07:31.446Z"}]
+[2025-11-17 14:49:23]   Winner already notified. Skipping.
+[2025-11-17 14:49:23] Checking auction: auction_1763386322468, endTime: 2025-11-17T13:33:00.000Z, bids: [{"name":"johannes","email":"email@test.se","amount":2,"timestamp":"2025-11-17T13:32:18.614Z"}]
+[2025-11-17 14:49:23]   Sending email to email@test.se...
+[2025-11-17 14:49:23] sendMailCLI called
+[2025-11-17 14:49:23] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 14:49:23] Message prepared. Length: 0
+[2025-11-17 14:49:23] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 14:49:23] SMTP connected
+[2025-11-17 14:49:23] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 14:49:23] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 14:49:23] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 14:49:23] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 14:49:24] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 14:49:24] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:49:24] SMTP CMD: RCPT TO:<email@test.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:49:24] SMTP CMD: DATA | RESP: 354 Go ahead
+
+[2025-11-17 14:49:24] SMTP CMD: QUIT | RESP: 250 2.0.0 Ok: queued
+
+[2025-11-17 14:49:24] Email sent successfully to email@test.se
+[2025-11-17 14:49:25]   Email sent successfully. Winner notified.
+[2025-11-17 14:49:25] Checking auction: auction_1763386364350, endTime: 2025-11-17T13:34:00.000Z, bids: [{"name":"johannes","email":"email@test.se","amount":23,"timestamp":"2025-11-17T13:33:00.211Z"}]
+[2025-11-17 14:49:25]   Sending email to email@test.se...
+[2025-11-17 14:49:25] sendMailCLI called
+[2025-11-17 14:49:25] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 14:49:25] Message prepared. Length: 0
+[2025-11-17 14:49:25] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 14:49:25] SMTP connected
+[2025-11-17 14:49:25] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 14:49:25] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 14:49:25] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 14:49:26] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 14:49:26] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 14:49:26] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:49:26] SMTP CMD: RCPT TO:<email@test.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:49:26] SMTP CMD: DATA | RESP: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 14:49:26] Exception in sendMailCLI: SMTP error on command 'DATA': 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 14:49:27] Failed to send email to email@test.se, retrying after 1 second...
+[2025-11-17 14:49:28] sendMailCLI called
+[2025-11-17 14:49:28] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 14:49:28] Message prepared. Length: 0
+[2025-11-17 14:49:28] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 14:49:28] SMTP connected
+[2025-11-17 14:49:28] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 14:49:28] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 14:49:29] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 14:49:29] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 14:49:29] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 14:49:29] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:49:29] SMTP CMD: RCPT TO:<email@test.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:49:29] SMTP CMD: DATA | RESP: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 14:49:29] Exception in sendMailCLI: SMTP error on command 'DATA': 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 14:49:29]   Failed to send email to email@test.se.
+[2025-11-17 14:49:29] Updated storage with winnerNotified flags.
+[2025-11-17 14:49:29] Cron job completed. Checked 3 auctions.
+
+[2025-11-17 14:50:19] Cron job started.
+[2025-11-17 14:50:20] Loaded 3 auctions from storage.
+[2025-11-17 14:50:20] Checking auction: auction_1763384835522, endTime: 2025-11-17T13:08:00.000Z, bids: [{"name":"Johannes","email":"johan.es171@gmail.com","amount":2,"timestamp":"2025-11-17T13:07:31.446Z"}]
+[2025-11-17 14:50:20]   Winner already notified. Skipping.
+[2025-11-17 14:50:20] Checking auction: auction_1763386322468, endTime: 2025-11-17T13:33:00.000Z, bids: [{"name":"johannes","email":"email@test.se","amount":2,"timestamp":"2025-11-17T13:32:18.614Z"}]
+[2025-11-17 14:50:20]   Winner already notified. Skipping.
+[2025-11-17 14:50:20] Checking auction: auction_1763386364350, endTime: 2025-11-17T13:34:00.000Z, bids: [{"name":"johannes","email":"email@test.se","amount":23,"timestamp":"2025-11-17T13:33:00.211Z"}]
+[2025-11-17 14:50:20]   Sending email to email@test.se...
+[2025-11-17 14:50:20] sendMailCLI called
+[2025-11-17 14:50:20] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 14:50:20] Message prepared. Length: 0
+[2025-11-17 14:50:20] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 14:50:20] SMTP connected
+[2025-11-17 14:50:20] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 14:50:20] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 14:50:20] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 14:50:20] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 14:50:20] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 14:50:20] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:50:20] SMTP CMD: RCPT TO:<email@test.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:50:21] SMTP CMD: DATA | RESP: 354 Go ahead
+
+[2025-11-17 14:50:21] SMTP CMD: QUIT | RESP: 250 2.0.0 Ok: queued
+
+[2025-11-17 14:50:21] Email sent successfully to email@test.se
+[2025-11-17 14:50:23]   Email sent successfully. Winner notified.
+[2025-11-17 14:50:23] Updated storage with winnerNotified flags.
+[2025-11-17 14:50:23] Cron job completed. Checked 3 auctions.
+
+[2025-11-17 14:50:40] Cron job started.
+[2025-11-17 14:50:41] Loaded 3 auctions from storage.
+[2025-11-17 14:50:41] Checking auction: auction_1763384835522, endTime: 2025-11-17T13:08:00.000Z, bids: [{"name":"Johannes","email":"johan.es171@gmail.com","amount":2,"timestamp":"2025-11-17T13:07:31.446Z"}]
+[2025-11-17 14:50:41]   Sending email to johan.es171@gmail.com...
+[2025-11-17 14:50:41] sendMailCLI called
+[2025-11-17 14:50:41] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 14:50:41] Message prepared. Length: 0
+[2025-11-17 14:50:41] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 14:50:41] SMTP connected
+[2025-11-17 14:50:41] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 14:50:41] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 14:50:41] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 14:50:41] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 14:50:42] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 14:50:42] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:50:42] SMTP CMD: RCPT TO:<johan.es171@gmail.com> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:50:42] SMTP CMD: DATA | RESP: 354 Go ahead
+
+[2025-11-17 14:50:42] SMTP CMD: QUIT | RESP: 250 2.0.0 Ok: queued
+
+[2025-11-17 14:50:42] Email sent successfully to johan.es171@gmail.com
+[2025-11-17 14:50:44]   Email sent successfully. Winner notified.
+[2025-11-17 14:50:44] Checking auction: auction_1763386322468, endTime: 2025-11-17T13:33:00.000Z, bids: [{"name":"johannes","email":"email@test.se","amount":2,"timestamp":"2025-11-17T13:32:18.614Z"}]
+[2025-11-17 14:50:44]   Sending email to email@test.se...
+[2025-11-17 14:50:44] sendMailCLI called
+[2025-11-17 14:50:44] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 14:50:44] Message prepared. Length: 0
+[2025-11-17 14:50:44] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 14:50:44] SMTP connected
+[2025-11-17 14:50:44] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 14:50:44] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 14:50:44] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 14:50:45] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 14:50:45] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 14:50:45] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:50:45] SMTP CMD: RCPT TO:<email@test.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:50:45] SMTP CMD: DATA | RESP: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 14:50:45] Exception in sendMailCLI: SMTP error on command 'DATA': 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 14:50:47] Failed to send email to email@test.se, retrying after 2 seconds...
+[2025-11-17 14:50:49] sendMailCLI called
+[2025-11-17 14:50:49] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 14:50:49] Message prepared. Length: 0
+[2025-11-17 14:50:49] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 14:50:49] SMTP connected
+[2025-11-17 14:50:49] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 14:50:49] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 14:50:49] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 14:50:49] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 14:50:50] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 14:50:50] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:50:50] SMTP CMD: RCPT TO:<email@test.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:50:50] SMTP CMD: DATA | RESP: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 14:50:50] Exception in sendMailCLI: SMTP error on command 'DATA': 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 14:50:50]   Failed to send email to email@test.se.
+[2025-11-17 14:50:50] Checking auction: auction_1763386364350, endTime: 2025-11-17T13:34:00.000Z, bids: [{"name":"johannes","email":"email@test.se","amount":23,"timestamp":"2025-11-17T13:33:00.211Z"}]
+[2025-11-17 14:50:50]   Sending email to email@test.se...
+[2025-11-17 14:50:50] sendMailCLI called
+[2025-11-17 14:50:50] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 14:50:50] Message prepared. Length: 0
+[2025-11-17 14:50:50] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 14:50:50] SMTP connected
+[2025-11-17 14:50:50] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 14:50:50] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 14:50:50] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 14:50:50] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 14:50:51] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 14:50:51] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:50:51] SMTP CMD: RCPT TO:<email@test.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:50:51] SMTP CMD: DATA | RESP: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 14:50:51] Exception in sendMailCLI: SMTP error on command 'DATA': 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 14:50:53] Failed to send email to email@test.se, retrying after 2 seconds...
+[2025-11-17 14:50:55] sendMailCLI called
+[2025-11-17 14:50:55] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 14:50:55] Message prepared. Length: 0
+[2025-11-17 14:50:55] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 14:50:55] SMTP connected
+[2025-11-17 14:50:55] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 14:50:55] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 14:50:55] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 14:50:55] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 14:50:55] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 14:50:56] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:50:56] SMTP CMD: RCPT TO:<email@test.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:50:56] SMTP CMD: DATA | RESP: 354 Go ahead
+
+[2025-11-17 14:50:56] SMTP CMD: QUIT | RESP: 250 2.0.0 Ok: queued
+
+[2025-11-17 14:50:56] Email sent successfully to email@test.se
+[2025-11-17 14:50:56]   Email sent successfully. Winner notified.
+[2025-11-17 14:50:56] Updated storage with winnerNotified flags.
+[2025-11-17 14:50:56] Cron job completed. Checked 3 auctions.
+
+[2025-11-17 14:53:33] Cron job started.
+[2025-11-17 14:53:34] Loaded 3 auctions from storage.
+[2025-11-17 14:53:34] Checking auction: auction_1763384835522, endTime: 2025-11-17T13:08:00.000Z, bids: [{"name":"Johannes","email":"johan.es171@gmail.com","amount":2,"timestamp":"2025-11-17T13:07:31.446Z"}]
+[2025-11-17 14:53:34]   Sending email to johan.es171@gmail.com...
+[2025-11-17 14:53:34] sendMailCLI called
+[2025-11-17 14:53:34] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 14:53:34] Message prepared. Length: 4899
+[2025-11-17 14:53:34] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 14:53:34] SMTP connected
+[2025-11-17 14:53:34] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 14:53:34] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 14:53:34] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 14:53:34] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 14:53:34] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 14:53:34] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:53:35] SMTP CMD: RCPT TO:<johan.es171@gmail.com> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:53:35] SMTP CMD: DATA | RESP: 354 Go ahead
+
+[2025-11-17 14:53:35] SMTP CMD: QUIT | RESP: 250 2.0.0 Ok: queued
+
+[2025-11-17 14:53:35] Email sent successfully to johan.es171@gmail.com
+[2025-11-17 14:53:37]   Email sent successfully. Winner notified.
+[2025-11-17 14:53:37] Checking auction: auction_1763386322468, endTime: 2025-11-17T13:33:00.000Z, bids: [{"name":"johannes","email":"email@test.se","amount":2,"timestamp":"2025-11-17T13:32:18.614Z"}]
+[2025-11-17 14:53:37]   Sending email to email@test.se...
+[2025-11-17 14:53:37] sendMailCLI called
+[2025-11-17 14:53:37] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 14:53:37] Message prepared. Length: 4899
+[2025-11-17 14:53:37] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 14:53:37] SMTP connected
+[2025-11-17 14:53:37] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 14:53:37] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 14:53:37] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 14:53:37] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 14:53:38] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 14:53:38] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:53:38] SMTP CMD: RCPT TO:<email@test.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:53:38] SMTP CMD: DATA | RESP: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 14:53:38] Exception in sendMailCLI: SMTP error on command 'DATA': 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 14:53:40]   Failed to send email to email@test.se.
+[2025-11-17 14:53:40] Checking auction: auction_1763386364350, endTime: 2025-11-17T13:34:00.000Z, bids: [{"name":"johannes","email":"email@test.se","amount":23,"timestamp":"2025-11-17T13:33:00.211Z"}]
+[2025-11-17 14:53:40]   Sending email to email@test.se...
+[2025-11-17 14:53:40] sendMailCLI called
+[2025-11-17 14:53:40] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 14:53:40] Message prepared. Length: 4902
+[2025-11-17 14:53:40] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 14:53:40] SMTP connected
+[2025-11-17 14:53:40] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 14:53:40] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 14:53:40] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 14:53:40] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 14:53:41] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 14:53:41] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:53:41] SMTP CMD: RCPT TO:<email@test.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:53:41] SMTP CMD: DATA | RESP: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 14:53:41] Exception in sendMailCLI: SMTP error on command 'DATA': 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 14:53:43]   Failed to send email to email@test.se.
+[2025-11-17 14:53:43] Updated storage with winnerNotified flags.
+[2025-11-17 14:53:43] Cron job completed. Checked 3 auctions.
+
+[2025-11-17 14:54:31] Cron job started.
+[2025-11-17 14:54:31] Loaded 3 auctions from storage.
+[2025-11-17 14:54:31] Checking auction: auction_1763384835522, endTime: 2025-11-17T13:08:00.000Z, bids: [{"name":"Johannes","email":"johan.es171@gmail.com","amount":2,"timestamp":"2025-11-17T13:07:31.446Z"}]
+[2025-11-17 14:54:31]   Winner already notified. Skipping.
+[2025-11-17 14:54:31] Checking auction: auction_1763386322468, endTime: 2025-11-17T13:33:00.000Z, bids: [{"name":"johannes","email":"email@test.se","amount":2,"timestamp":"2025-11-17T13:32:18.614Z"}]
+[2025-11-17 14:54:31]   Sending email to email@test.se...
+[2025-11-17 14:54:31] sendMailCLI called
+[2025-11-17 14:54:31] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 14:54:31] Message prepared. Length: 4899
+[2025-11-17 14:54:31] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 14:54:31] SMTP connected
+[2025-11-17 14:54:31] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 14:54:31] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 14:54:32] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 14:54:32] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 14:54:32] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 14:54:32] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:54:32] SMTP CMD: RCPT TO:<email@test.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:54:32] SMTP CMD: DATA | RESP: 354 Go ahead
+
+[2025-11-17 14:54:32] SMTP CMD: QUIT | RESP: 250 2.0.0 Ok: queued
+
+[2025-11-17 14:54:32] Email sent successfully to email@test.se
+[2025-11-17 14:55:06] Cron job started.
+[2025-11-17 14:55:07] Loaded 3 auctions from storage.
+[2025-11-17 14:55:07] Checking auction: auction_1763384835522, endTime: 2025-11-17T13:08:00.000Z, bids: [{"name":"Johannes","email":"johan.es171@gmail.com","amount":2,"timestamp":"2025-11-17T13:07:31.446Z"}]
+[2025-11-17 14:55:07]   Sending email to johan.es171@gmail.com...
+[2025-11-17 14:55:07] sendMailCLI called
+[2025-11-17 14:55:07] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 14:55:07] Message prepared. Length: 4899
+[2025-11-17 14:55:07] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 14:55:07] SMTP connected
+[2025-11-17 14:55:07] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 14:55:07] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 14:55:07] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 14:55:07] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 14:55:07] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 14:55:07] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:55:08] SMTP CMD: RCPT TO:<johan.es171@gmail.com> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:55:08] SMTP CMD: DATA | RESP: 354 Go ahead
+
+[2025-11-17 14:55:08] SMTP CMD: QUIT | RESP: 250 2.0.0 Ok: queued
+
+[2025-11-17 14:55:08] Email sent successfully to johan.es171@gmail.com
+[2025-11-17 14:55:08]   Email sent successfully. Winner notified.
+[2025-11-17 14:55:08] Checking auction: auction_1763386322468, endTime: 2025-11-17T13:33:00.000Z, bids: [{"name":"johannes","email":"email@test.se","amount":2,"timestamp":"2025-11-17T13:32:18.614Z"}]
+[2025-11-17 14:55:08]   Sending email to email@test.se...
+[2025-11-17 14:55:08] sendMailCLI called
+[2025-11-17 14:55:08] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 14:55:08] Message prepared. Length: 4899
+[2025-11-17 14:55:08] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 14:55:08] SMTP connected
+[2025-11-17 14:55:08] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 14:55:08] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 14:55:08] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 14:55:08] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 14:55:09] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 14:55:09] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:55:09] SMTP CMD: RCPT TO:<email@test.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:55:09] SMTP CMD: DATA | RESP: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 14:55:09] Exception in sendMailCLI: SMTP error on command 'DATA': 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 14:55:09]   sendMailCLI returned false, waiting 5 seconds before retrying...
+[2025-11-17 14:55:14]   Retrying to send email to email@test.se...
+[2025-11-17 14:55:14] sendMailCLI called
+[2025-11-17 14:55:14] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 14:55:14] Message prepared. Length: 4899
+[2025-11-17 14:55:14] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 14:55:14] SMTP connected
+[2025-11-17 14:55:14] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 14:55:14] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 14:55:14] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 14:55:14] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 14:55:15] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 14:55:15] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:55:15] SMTP CMD: RCPT TO:<email@test.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:55:15] SMTP CMD: DATA | RESP: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 14:55:15] Exception in sendMailCLI: SMTP error on command 'DATA': 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 14:55:15]   Failed to send email to email@test.se.
+[2025-11-17 14:55:15] Checking auction: auction_1763386364350, endTime: 2025-11-17T13:34:00.000Z, bids: [{"name":"johannes","email":"email@test.se","amount":23,"timestamp":"2025-11-17T13:33:00.211Z"}]
+[2025-11-17 14:55:15]   Sending email to email@test.se...
+[2025-11-17 14:55:15] sendMailCLI called
+[2025-11-17 14:55:15] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 14:55:15] Message prepared. Length: 4902
+[2025-11-17 14:55:15] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 14:55:15] SMTP connected
+[2025-11-17 14:55:15] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 14:55:15] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 14:55:15] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 14:55:16] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 14:55:16] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 14:55:16] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:55:16] SMTP CMD: RCPT TO:<email@test.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:55:16] SMTP CMD: DATA | RESP: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 14:55:16] Exception in sendMailCLI: SMTP error on command 'DATA': 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 14:55:16]   sendMailCLI returned false, waiting 5 seconds before retrying...
+[2025-11-17 14:55:21]   Retrying to send email to email@test.se...
+[2025-11-17 14:55:21] sendMailCLI called
+[2025-11-17 14:55:21] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 14:55:21] Message prepared. Length: 4902
+[2025-11-17 14:55:21] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 14:55:21] SMTP connected
+[2025-11-17 14:55:21] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 14:55:21] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 14:55:21] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 14:55:22] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 14:55:22] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 14:55:22] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:55:22] SMTP CMD: RCPT TO:<email@test.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 14:55:22] SMTP CMD: DATA | RESP: 354 Go ahead
+
+[2025-11-17 14:55:22] SMTP CMD: QUIT | RESP: 250 2.0.0 Ok: queued
+
+[2025-11-17 14:55:22] Email sent successfully to email@test.se
+[2025-11-17 14:55:22]   Email sent successfully. Winner notified.
+[2025-11-17 14:55:22] Updated storage with winnerNotified flags.
+[2025-11-17 14:55:22] Cron job completed. Checked 3 auctions.
+
+[2025-11-17 15:01:21] Cron job started.
+[2025-11-17 15:01:22] Loaded 3 auctions from storage.
+[2025-11-17 15:01:22]   Sending email to johan.es171@gmail.com...
+[2025-11-17 15:01:22] sendMailCLI called
+[2025-11-17 15:01:22] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 15:01:22] Message prepared. Length: 4899
+[2025-11-17 15:01:22] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 15:01:22] SMTP connected
+[2025-11-17 15:01:22] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 15:01:22] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 15:01:22] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 15:01:23] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 15:01:23] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 15:01:23] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 15:01:23] SMTP CMD: RCPT TO:<johan.es171@gmail.com> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 15:01:23] SMTP CMD: DATA | RESP: 354 Go ahead
+
+[2025-11-17 15:01:23] SMTP CMD: QUIT | RESP: 250 2.0.0 Ok: queued
+
+[2025-11-17 15:01:23] Email sent successfully to johan.es171@gmail.com
+[2025-11-17 15:01:23] Waiting 2 seconds before checking send status...
+[2025-11-17 15:01:25]   Email sent successfully. Winner notified.
+[2025-11-17 15:01:25]   Sending email to email@test.se...
+[2025-11-17 15:01:25] sendMailCLI called
+[2025-11-17 15:01:25] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 15:01:25] Message prepared. Length: 4899
+[2025-11-17 15:01:25] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 15:01:25] SMTP connected
+[2025-11-17 15:01:25] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 15:01:26] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 15:01:26] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 15:01:26] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 15:01:26] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 15:01:26] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 15:01:26] SMTP CMD: RCPT TO:<email@test.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 15:01:26] SMTP CMD: DATA | RESP: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 15:01:26] Exception in sendMailCLI: SMTP error on command 'DATA': 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 15:01:26] Waiting 2 seconds before checking send status...
+[2025-11-17 15:01:28]   sendMailCLI returned false, waiting 5 seconds before retrying...
+[2025-11-17 15:01:33]   Retrying to send email to email@test.se...
+[2025-11-17 15:01:33] sendMailCLI called
+[2025-11-17 15:01:33] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 15:01:33] Message prepared. Length: 4899
+[2025-11-17 15:01:33] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 15:01:33] SMTP connected
+[2025-11-17 15:01:33] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 15:01:34] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 15:01:34] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 15:01:34] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 15:01:34] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 15:01:34] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 15:01:34] SMTP CMD: RCPT TO:<email@test.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 15:01:34] SMTP CMD: DATA | RESP: 354 Go ahead
+
+[2025-11-17 15:01:34] SMTP CMD: QUIT | RESP: 250 2.0.0 Ok: queued
+
+[2025-11-17 15:01:34] Email sent successfully to email@test.se
+[2025-11-17 15:01:34]   Email sent successfully. Winner notified.
+[2025-11-17 15:01:34]   Sending email to email@test.se...
+[2025-11-17 15:01:34] sendMailCLI called
+[2025-11-17 15:01:34] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 15:01:34] Message prepared. Length: 4902
+[2025-11-17 15:01:34] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 15:01:35] SMTP connected
+[2025-11-17 15:01:35] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 15:01:35] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 15:01:35] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 15:01:35] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 15:01:35] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 15:01:35] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 15:01:35] SMTP CMD: RCPT TO:<email@test.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 15:01:35] SMTP CMD: DATA | RESP: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 15:01:35] Exception in sendMailCLI: SMTP error on command 'DATA': 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 15:01:35] Waiting 2 seconds before checking send status...
+[2025-11-17 15:01:38]   sendMailCLI returned false, waiting 5 seconds before retrying...
+[2025-11-17 15:01:43]   Retrying to send email to email@test.se...
+[2025-11-17 15:01:43] sendMailCLI called
+[2025-11-17 15:01:43] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 15:01:43] Message prepared. Length: 4902
+[2025-11-17 15:01:43] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 15:01:43] SMTP connected
+[2025-11-17 15:01:43] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 15:01:43] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 15:01:43] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 15:01:43] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 15:01:43] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 15:01:43] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 15:01:43] SMTP CMD: RCPT TO:<email@test.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 15:01:44] SMTP CMD: DATA | RESP: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 15:01:44] Exception in sendMailCLI: SMTP error on command 'DATA': 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 15:01:44]   Failed to send email to email@test.se.
+[2025-11-17 15:01:44] Updated storage with winnerNotified flags.
+[2025-11-17 15:01:44] Cron job completed. Checked 3 auctions.
+
+[2025-11-17 15:03:44] Cron job started.
+[2025-11-17 15:03:45] Loaded 3 auctions from storage.
+[2025-11-17 15:03:45]   Sending email to johan.es171@gmail.com...
+[2025-11-17 15:03:45] sendMailCLI called
+[2025-11-17 15:03:45] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 15:03:45] Message prepared. Length: 4899
+[2025-11-17 15:03:45] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 15:03:45] SMTP connected
+[2025-11-17 15:03:45] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 15:03:45] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 15:03:46] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 15:03:46] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 15:03:46] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 15:03:46] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 15:03:46] SMTP CMD: RCPT TO:<johan.es171@gmail.com> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 15:03:46] SMTP CMD: DATA | RESP: 354 Go ahead
+
+[2025-11-17 15:03:46] SMTP CMD: QUIT | RESP: 250 2.0.0 Ok: queued
+
+[2025-11-17 15:03:46] Email sent successfully to johan.es171@gmail.com
+[2025-11-17 15:03:46]   Email sent successfully. Winner notified.
+[2025-11-17 15:03:48]   Sending email to email@test.se...
+[2025-11-17 15:03:48] sendMailCLI called
+[2025-11-17 15:03:48] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 15:03:48] Message prepared. Length: 4899
+[2025-11-17 15:03:48] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 15:03:48] SMTP connected
+[2025-11-17 15:03:49] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 15:03:49] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 15:03:49] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 15:03:49] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 15:03:49] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 15:03:49] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 15:03:49] SMTP CMD: RCPT TO:<email@test.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 15:03:49] SMTP CMD: DATA | RESP: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 15:03:49] Exception in sendMailCLI: SMTP error on command 'DATA': 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 15:03:49]   Waiting 5 seconds before retrying...
+[2025-11-17 15:03:54] sendMailCLI called
+[2025-11-17 15:03:54] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 15:03:54] Message prepared. Length: 4899
+[2025-11-17 15:03:54] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 15:03:55] SMTP connected
+[2025-11-17 15:03:55] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 15:03:55] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 15:03:55] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 15:03:55] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 15:03:55] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 15:03:55] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 15:03:55] SMTP CMD: RCPT TO:<email@test.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 15:03:55] SMTP CMD: DATA | RESP: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 15:03:55] Exception in sendMailCLI: SMTP error on command 'DATA': 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 15:03:55]   Waiting 5 seconds before retrying...
+[2025-11-17 15:04:01] sendMailCLI called
+[2025-11-17 15:04:01] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 15:04:01] Message prepared. Length: 4899
+[2025-11-17 15:04:01] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 15:04:01] SMTP connected
+[2025-11-17 15:04:01] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 15:04:01] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 15:04:01] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 15:04:01] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 15:04:01] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 15:04:01] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 15:04:01] SMTP CMD: RCPT TO:<email@test.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 15:04:02] SMTP CMD: DATA | RESP: 354 Go ahead
+
+[2025-11-17 15:04:02] SMTP CMD: QUIT | RESP: 250 2.0.0 Ok: queued
+
+[2025-11-17 15:04:02] Email sent successfully to email@test.se
+[2025-11-17 15:04:02]   Email sent successfully. Winner notified.
+[2025-11-17 15:04:04]   Sending email to email@test.se...
+[2025-11-17 15:04:04] sendMailCLI called
+[2025-11-17 15:04:04] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 15:04:04] Message prepared. Length: 4902
+[2025-11-17 15:04:04] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 15:04:04] SMTP connected
+[2025-11-17 15:04:04] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 15:04:04] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 15:04:04] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 15:04:04] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 15:04:04] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 15:04:05] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 15:04:05] SMTP CMD: RCPT TO:<email@test.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 15:04:05] SMTP CMD: DATA | RESP: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 15:04:05] Exception in sendMailCLI: SMTP error on command 'DATA': 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 15:04:05]   Waiting 5 seconds before retrying...
+[2025-11-17 15:04:10] sendMailCLI called
+[2025-11-17 15:04:10] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 15:04:10] Message prepared. Length: 4902
+[2025-11-17 15:04:10] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 15:04:10] SMTP connected
+[2025-11-17 15:04:10] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 15:04:10] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 15:04:10] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 15:04:10] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 15:04:10] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 15:04:11] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 15:04:11] SMTP CMD: RCPT TO:<email@test.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 15:04:11] SMTP CMD: DATA | RESP: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 15:04:11] Exception in sendMailCLI: SMTP error on command 'DATA': 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 15:04:11]   Waiting 5 seconds before retrying...
+[2025-11-17 15:04:16] sendMailCLI called
+[2025-11-17 15:04:16] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 15:04:16] Message prepared. Length: 4902
+[2025-11-17 15:04:16] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 15:04:16] SMTP connected
+[2025-11-17 15:04:16] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 15:04:16] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 15:04:16] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 15:04:16] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 15:04:16] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 15:04:16] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 15:04:17] SMTP CMD: RCPT TO:<email@test.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 15:04:17] SMTP CMD: DATA | RESP: 354 Go ahead
+
+[2025-11-17 15:04:17] SMTP CMD: QUIT | RESP: 250 2.0.0 Ok: queued
+
+[2025-11-17 15:04:17] Email sent successfully to email@test.se
+[2025-11-17 15:04:17]   Email sent successfully. Winner notified.
+[2025-11-17 15:04:19] Cron job completed. Checked 3 auctions.
+
+[2025-11-17 15:08:01] Cron job started.
+[2025-11-17 15:08:02] Loaded 3 auctions from storage.
+[2025-11-17 15:08:02] sendMailCLI called
+[2025-11-17 15:08:02] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 15:08:02] Message prepared. Length: 4899
+[2025-11-17 15:08:02] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 15:08:02] SMTP connected
+[2025-11-17 15:08:02] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 15:08:03] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 15:08:03] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 15:08:03] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 15:08:03] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 15:08:03] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 15:08:03] SMTP CMD: RCPT TO:<johan.es171@gmail.com> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 15:08:03] SMTP CMD: DATA | RESP: 354 Go ahead
+
+[2025-11-17 15:08:03] SMTP CMD: QUIT | RESP: 250 2.0.0 Ok: queued
+
+[2025-11-17 15:08:03] Email sent successfully to johan.es171@gmail.com
+[2025-11-17 15:08:06] sendMailCLI called
+[2025-11-17 15:08:06] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 15:08:06] Message prepared. Length: 4899
+[2025-11-17 15:08:06] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 15:08:07] SMTP connected
+[2025-11-17 15:08:07] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 15:08:07] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 15:08:07] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 15:08:07] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 15:08:07] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 15:08:07] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 15:08:07] SMTP CMD: RCPT TO:<email@test.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 15:08:07] SMTP CMD: DATA | RESP: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 15:08:07] Exception in sendMailCLI: SMTP error on command 'DATA': 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 15:08:12] sendMailCLI called
+[2025-11-17 15:08:12] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 15:08:12] Message prepared. Length: 4899
+[2025-11-17 15:08:12] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 15:08:13] SMTP connected
+[2025-11-17 15:08:13] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 15:08:13] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 15:08:13] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 15:08:13] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 15:08:13] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 15:08:13] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 15:08:13] SMTP CMD: RCPT TO:<email@test.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 15:08:13] SMTP CMD: DATA | RESP: 354 Go ahead
+
+[2025-11-17 15:08:14] SMTP CMD: QUIT | RESP: 250 2.0.0 Ok: queued
+
+[2025-11-17 15:08:14] Email sent successfully to email@test.se
+[2025-11-17 15:08:17] sendMailCLI called
+[2025-11-17 15:08:17] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 15:08:17] Message prepared. Length: 4902
+[2025-11-17 15:08:17] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 15:08:17] SMTP connected
+[2025-11-17 15:08:17] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 15:08:17] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 15:08:17] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 15:08:17] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 15:08:17] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 15:08:17] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 15:08:18] SMTP CMD: RCPT TO:<email@test.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 15:08:18] SMTP CMD: DATA | RESP: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 15:08:18] Exception in sendMailCLI: SMTP error on command 'DATA': 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 15:08:23] sendMailCLI called
+[2025-11-17 15:08:23] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 15:08:23] Message prepared. Length: 4902
+[2025-11-17 15:08:23] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 15:08:23] SMTP connected
+[2025-11-17 15:08:23] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 15:08:23] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 15:08:23] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 15:08:23] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 15:08:23] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 15:08:23] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 15:08:24] SMTP CMD: RCPT TO:<email@test.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 15:08:24] SMTP CMD: DATA | RESP: 354 Go ahead
+
+[2025-11-17 15:08:24] SMTP CMD: QUIT | RESP: 250 2.0.0 Ok: queued
+
+[2025-11-17 15:08:24] Email sent successfully to email@test.se
+[2025-11-17 15:08:27] Updated storage with winnerNotified flags.
+[2025-11-17 15:08:27] Cron job completed. Checked 3 auctions.
+
+[2025-11-17 15:20:10] Cron job started.
+[2025-11-17 15:20:11] Loaded 3 auctions from storage.
+[2025-11-17 15:20:11] Cron job completed. Checked 3 auctions.
+
+[2025-11-17 15:20:31] Cron job started.
+[2025-11-17 15:20:32] Loaded 3 auctions from storage.
+[2025-11-17 15:20:32] sendMailCLI called
+[2025-11-17 15:20:32] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 15:20:32] Message prepared. Length: 4899
+[2025-11-17 15:20:32] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 15:20:32] SMTP connected
+[2025-11-17 15:20:32] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 15:20:32] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 15:20:32] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 15:20:32] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 15:20:32] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 15:20:32] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 15:20:33] SMTP CMD: RCPT TO:<johan.es171@gmail.com> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 15:20:33] SMTP CMD: DATA | RESP: 354 Go ahead
+
+[2025-11-17 15:20:33] SMTP CMD: QUIT | RESP: 250 2.0.0 Ok: queued
+
+[2025-11-17 15:20:33] Email sent successfully to johan.es171@gmail.com
+[2025-11-17 15:20:36] sendMailCLI called
+[2025-11-17 15:20:36] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 15:20:36] Message prepared. Length: 4899
+[2025-11-17 15:20:36] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 15:20:36] SMTP connected
+[2025-11-17 15:20:36] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 15:20:36] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 15:20:36] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 15:20:36] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 15:20:37] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 15:20:37] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 15:20:37] SMTP CMD: RCPT TO:<email@test.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 15:20:37] SMTP CMD: DATA | RESP: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 15:20:37] Exception in sendMailCLI: SMTP error on command 'DATA': 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 15:20:42] sendMailCLI called
+[2025-11-17 15:20:42] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 15:20:42] Message prepared. Length: 4899
+[2025-11-17 15:20:42] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 15:20:42] SMTP connected
+[2025-11-17 15:20:42] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 15:20:42] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 15:20:42] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 15:20:43] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 15:20:43] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 15:20:43] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 15:20:43] SMTP CMD: RCPT TO:<email@test.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 15:20:43] SMTP CMD: DATA | RESP: 354 Go ahead
+
+[2025-11-17 15:20:43] SMTP CMD: QUIT | RESP: 250 2.0.0 Ok: queued
+
+[2025-11-17 15:20:43] Email sent successfully to email@test.se
+[2025-11-17 15:20:46] sendMailCLI called
+[2025-11-17 15:20:46] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 15:20:46] Message prepared. Length: 4902
+[2025-11-17 15:20:46] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 15:20:46] SMTP connected
+[2025-11-17 15:20:47] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 15:20:47] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 15:20:47] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 15:20:47] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 15:20:47] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 15:20:47] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 15:20:47] SMTP CMD: RCPT TO:<email@test.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 15:20:47] SMTP CMD: DATA | RESP: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 15:20:47] Exception in sendMailCLI: SMTP error on command 'DATA': 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 15:20:52] sendMailCLI called
+[2025-11-17 15:20:52] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 15:20:52] Message prepared. Length: 4902
+[2025-11-17 15:20:52] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 15:20:52] SMTP connected
+[2025-11-17 15:20:52] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 15:20:53] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 15:20:53] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 15:20:53] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 15:20:53] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 15:20:53] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 15:20:53] SMTP CMD: RCPT TO:<email@test.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 15:20:53] SMTP CMD: DATA | RESP: 354 Go ahead
+
+[2025-11-17 15:20:53] SMTP CMD: QUIT | RESP: 250 2.0.0 Ok: queued
+
+[2025-11-17 15:20:53] Email sent successfully to email@test.se
+[2025-11-17 15:20:56] Updated storage with winnerNotified flags.
+[2025-11-17 15:20:56] Cron job completed. Checked 3 auctions.
+
+[2025-11-17 15:31:47] sendMailCLI called
+[2025-11-17 15:31:47] SMTP settings: host=, port=, user=, from_email=
+[2025-11-17 15:31:47] Message prepared. Length: 4899
+[2025-11-17 15:31:47] Opening SMTP connection to :...
+[2025-11-17 15:37:21] sendMailCLI called
+[2025-11-17 15:37:21] SMTP settings: host=, port=587, user=, from_email=
+[2025-11-17 15:37:21] Message prepared. Length: 4899
+[2025-11-17 15:37:21] Opening SMTP connection to :587...
+[2025-11-17 15:37:25] fsockopen failed: No connection could be made because the target machine actively refused it (10061)
+[2025-11-17 15:40:42] sendMailCLI called
+[2025-11-17 15:40:42] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 15:40:42] Message prepared. Length: 4899
+[2025-11-17 15:40:42] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 15:40:42] SMTP connected
+[2025-11-17 15:40:42] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 15:40:43] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 15:40:43] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 15:40:43] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 15:40:43] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 15:40:43] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 15:40:43] SMTP CMD: RCPT TO:<johan.es171@gmail.com> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 15:40:43] SMTP CMD: DATA | RESP: 354 Go ahead
+
+[2025-11-17 15:40:43] SMTP CMD: QUIT | RESP: 250 2.0.0 Ok: queued
+
+[2025-11-17 15:40:43] Email sent successfully to johan.es171@gmail.com
+[2025-11-17 15:41:06] Cron job started.
+[2025-11-17 15:41:06] Loaded 3 auctions from storage.
+[2025-11-17 15:41:06] sendMailCLI called
+[2025-11-17 15:41:06] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 15:41:06] Message prepared. Length: 4899
+[2025-11-17 15:41:06] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 15:41:06] SMTP connected
+[2025-11-17 15:41:06] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 15:41:07] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 15:41:07] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 15:41:07] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 15:41:07] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 15:41:07] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 15:41:07] SMTP CMD: RCPT TO:<email@test.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 15:41:07] SMTP CMD: DATA | RESP: 354 Go ahead
+
+[2025-11-17 15:41:07] SMTP CMD: QUIT | RESP: 250 2.0.0 Ok: queued
+
+[2025-11-17 15:41:07] Email sent successfully to email@test.se
+[2025-11-17 15:41:10] sendMailCLI called
+[2025-11-17 15:41:10] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 15:41:10] Message prepared. Length: 4902
+[2025-11-17 15:41:10] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 15:41:10] SMTP connected
+[2025-11-17 15:41:11] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 15:41:11] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 15:41:11] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 15:41:11] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 15:41:11] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 15:41:11] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 15:41:11] SMTP CMD: RCPT TO:<email@test.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 15:41:11] SMTP CMD: DATA | RESP: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 15:41:11] Exception in sendMailCLI: SMTP error on command 'DATA': 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+[2025-11-17 15:41:16] sendMailCLI called
+[2025-11-17 15:41:16] SMTP settings: host=sandbox.smtp.mailtrap.io, port=587, user=fd50f35dc9d6ed, from_email=HBAuctions@helsingkrona.se
+[2025-11-17 15:41:16] Message prepared. Length: 4902
+[2025-11-17 15:41:16] Opening SMTP connection to sandbox.smtp.mailtrap.io:587...
+[2025-11-17 15:41:17] SMTP connected
+[2025-11-17 15:41:17] SMTP greeting: 220 smtp.mailtrap.io ESMTP ready
+
+[2025-11-17 15:41:17] SMTP CMD: EHLO localhost | RESP: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+[2025-11-17 15:41:17] SMTP CMD: AUTH LOGIN | RESP: 334 VXNlcm5hbWU6
+
+[2025-11-17 15:41:17] SMTP CMD: ZmQ1MGYzNWRjOWQ2ZWQ= | RESP: 334 UGFzc3dvcmQ6
+
+[2025-11-17 15:41:17] SMTP CMD: MThiOTczMzQwNWYyNjc= | RESP: 235 2.0.0 OK
+
+[2025-11-17 15:41:17] SMTP CMD: MAIL FROM:<HBAuctions@helsingkrona.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 15:41:17] SMTP CMD: RCPT TO:<email@test.se> | RESP: 250 2.1.0 Ok
+
+[2025-11-17 15:41:18] SMTP CMD: DATA | RESP: 354 Go ahead
+
+[2025-11-17 15:41:18] SMTP CMD: QUIT | RESP: 250 2.0.0 Ok: queued
+
+[2025-11-17 15:41:18] Email sent successfully to email@test.se
+[2025-11-17 15:41:21] Updated storage with winnerNotified flags.
+[2025-11-17 15:41:21] Cron job completed. Checked 3 auctions.
+
