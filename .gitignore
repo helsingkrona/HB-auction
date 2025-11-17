@@ -1,2 +1,4 @@
 resources/mail/PHPMailer/
 .env
+resources/logs/checkAuctions.log
+resources/storage/auctions.json
