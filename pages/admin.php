@@ -12,7 +12,7 @@ if (file_exists($envFile)) {
     }
 }
 
-$ADMIN_PASSWORD = $envVars['ADMIN_PASSWORD'] ?? 'admin123'; // fallback
+$ADMIN_PASSWORD = $envVars['ADMIN_PASSWORD'];
 ?>
 
 <!DOCTYPE html>
