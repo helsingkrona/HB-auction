@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Load auctions from storage
   async function loadAuctions() {
     // Load ALL auctions, not just active ones
-    const data = await storage.getAllAuctions();
+    const data = await storage.getActiveAuctions();
     auctions = data || [];
 
     // Sort: active first, ended last
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (auctions.length === 0) {
       grid.innerHTML =
-        '<p class="no-auctions">No auctions available at the moment.</p>';
+        '<p class="no-auctions" style="text-align: center">No auctions available at the moment.</p>';
       return;
     }
 
