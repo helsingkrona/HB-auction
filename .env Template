@@ -4,6 +4,6 @@ SMTP_PORT=587
 SMTP_USER=
 SMTP_PASS=
 FROM_EMAIL=auctions@helsingkrona.se
-FROM_NAME=Auctions
+FROM_NAME=HB Auctions
 ADMIN_PASSWORD=
 API_SECRET=
