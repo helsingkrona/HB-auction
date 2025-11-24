@@ -87,21 +87,42 @@ header p {
   color: white;
 }
 
-.admin-btn {
-  margin-left: auto; /* pushes the button to the right */
-}
-
 .auction-header {
   display: flex;
-  justify-content: center; /* centers the header text */
-  align-items: center; /* vertically center the items */
-  padding: 20px;
-  position: relative;
+  justify-content: space-between; /* space between title and button */
+  align-items: center;
+  background-color: #fff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap; /* allow wrapping on very narrow screens */
 }
 
 .auction-header h1 {
-  margin: 0 auto; /* centers the text */
+  margin: 0;
+  flex: 1 1 auto;
   text-align: center;
+  min-width: 0;
+}
+
+.auction-header .admin-btn {
+  flex: 0 0 auto;
+  margin-left: 10px;
+}
+
+@media (max-width: 400px) {
+  .auction-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .auction-header h1 {
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  .auction-header .admin-btn {
+    margin-left: 0;
+  }
 }
 
 .header-left {

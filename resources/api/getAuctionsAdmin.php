@@ -1,6 +1,14 @@
 <?php
+session_start();
+
+// Only allow if logged in as admin
+if (!($_SESSION['is_admin'] ?? false)) {
+    http_response_code(403);
+    echo json_encode(['error' => 'Unauthorized']);
+    exit;
+}
+
 header('Content-Type: application/json');
-header('Access-Control-Allow-Origin: https://auctions.helsingkrona.se');
 
 $storage = __DIR__ . '/../storage/auctions.json';
 if (!file_exists($storage)) {
@@ -14,13 +22,5 @@ if ($auctions === null) {
     exit;
 }
 
-// Remove all private bid data
-foreach ($auctions as &$auction) {
-    if (isset($auction['bids'])) {
-        foreach ($auction['bids'] as &$bid) {
-            unset($bid['email'], $bid['name']);
-        }
-    }
-}
-
+// Return full auctions with bids
 echo json_encode($auctions);

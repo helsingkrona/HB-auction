@@ -64,7 +64,6 @@ foreach ($auctions as &$auction) {
     rewind($fp);
     fwrite($fp, json_encode($auctions, JSON_PRETTY_PRINT));
     fflush($fp);
-
     $payload = [
         "to" => $winner['email'],
         "subject" => "🎉 Congratulations! You Won: {$auction['title']}",

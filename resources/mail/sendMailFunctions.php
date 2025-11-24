@@ -1,102 +1,66 @@
 <?php
-// sendMailFunctions.php - CLI-safe functions
 require_once __DIR__ . '/winnerEmailTemplate.php';
 
 function sendMailCLI(array $data): bool
 {
     $logFile = __DIR__ . '/../logs/checkAuctions.log';
     $log = function ($msg) use ($logFile) {
-        $line = "[" . date("Y-m-d H:i:s") . "] $msg\n";
-        file_put_contents($logFile, $line, FILE_APPEND);
+        file_put_contents($logFile, "[" . date("Y-m-d H:i:s") . "] $msg\n", FILE_APPEND);
     };
 
-    $log("sendMailCLI called");
+    $log("sendMailCLI called (API mode)");
 
-    try {
-        $envFile = __DIR__ . '/../../.env';
-        if (!file_exists($envFile)) {
-            $log(".env file not found at $envFile");
-            return false;
-        }
+    $env = parse_ini_file('/var/www/auctions/.env');
 
-        $env = parse_ini_file($envFile); // reads key=value lines
-        $host = $env["SMTP_HOST"] ?? '';
-        $port = isset($env["SMTP_PORT"]) ? (int) $env["SMTP_PORT"] : 587; // cast to int!
-        $user = $env["SMTP_USER"] ?? '';
-        $pass = $env["SMTP_PASS"] ?? '';
-        $from_email = $env["FROM_EMAIL"] ?? '';
-        $from_name = $env["FROM_NAME"] ?? 'Auction System';
+    $apiToken = $env["SMTP_PASS"];
+    $from_email = $env["FROM_EMAIL"];
+    $from_name = $env["FROM_NAME"];
 
-        $log("SMTP settings: host=$host, port=$port, user=$user, from_email=$from_email");
+    $to = $data['to'];
+    $subject = $data['subject'];
+    $html = $data['template'] === "winner"
+        ? getWinnerEmailTemplate(
+            $data['templateData']['winnerName'],
+            $data['templateData']['auctionTitle'],
+            $data['templateData']['auctionDescription'] ?? '',
+            $data['templateData']['winningBid'],
+            $data['templateData']['auctionEndTime']
+        )
+        : $data['message'];
 
-        $to = $data['to'] ?? '';
-        $subject = $data['subject'] ?? '';
-        $template = $data['template'] ?? null;
-        $templateData = $data['templateData'] ?? null;
+    $log("Now Im building the API payload");
 
-        if ($template === "winner" && $templateData) {
-            $message = getWinnerEmailTemplate(
-                $templateData["winnerName"],
-                $templateData["auctionTitle"],
-                $templateData["auctionDescription"] ?? '',
-                $templateData["winningBid"],
-                $templateData["auctionEndTime"]
-            );
-            $isHtml = true;
-        } else {
-            $message = $data['message'] ?? '';
-            $isHtml = $data['isHtml'] ?? false;
-        }
+    // Build API payload
+    $payload = json_encode([
+        "from" => ["email" => $from_email, "name" => $from_name],
+        "to" => [["email" => $to]],
+        "subject" => $subject,
+        "text" => strip_tags($html),
+        "html" => $html,
+        "category" => "CLI Send",
+    ]);
 
-        $log("Message prepared. Length: " . strlen($message));
+    $log("this is before the curl init");
 
-        // SMTP connection
-        $log("Opening SMTP connection to $host:$port...");
-        $fp = @fsockopen($host, $port, $errno, $errstr, 10);
-        if (!$fp) {
-            $log("fsockopen failed: $errstr ($errno)");
-            return false;
-        }
-        $log("SMTP connected");
+    $ch = curl_init("https://send.api.mailtrap.io/api/send");
+    $log($ch);
+    curl_setopt_array($ch, [
+        CURLOPT_POST => true,
+        CURLOPT_HTTPHEADER => [
+            "Authorization: Bearer $apiToken",
+            "Content-Type: application/json"
+        ],
+        CURLOPT_POSTFIELDS => $payload,
+        CURLOPT_RETURNTRANSFER => true
+    ]);
 
-        $greeting = fread($fp, 1024);
-        $log("SMTP greeting: $greeting");
+    $log("this is after the curl init");
 
-        $send = function ($fp, $cmd, $expect = null) use ($log) {
-            fwrite($fp, $cmd . "\r\n");
-            $res = fread($fp, 1024);
-            $log("SMTP CMD: $cmd | RESP: $res");
-            if ($expect && !preg_match("/^$expect/", $res)) {
-                throw new Exception("SMTP error on command '$cmd': $res");
-            }
-            return $res;
-        };
+    $response = curl_exec($ch);
+    $status = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    curl_close($ch);
 
-        $send($fp, "EHLO localhost", "250");
-        $send($fp, "AUTH LOGIN", "334");
-        $send($fp, base64_encode($user), "334");
-        $send($fp, base64_encode($pass), "235");
-        $send($fp, "MAIL FROM:<$from_email>", "250");
-        $send($fp, "RCPT TO:<$to>", "250");
-        $send($fp, "DATA", "354");
+    $log("Mailtrap API response: HTTP $status, body: $response");
 
-        $headers = "From: $from_name <$from_email>\r\n";
-        $headers .= "To: $to\r\n";
-        $headers .= "Subject: $subject\r\n";
-        $headers .= "MIME-Version: 1.0\r\n";
-        $headers .= $isHtml
-            ? "Content-Type: text/html; charset=UTF-8\r\n\r\n"
-            : "Content-Type: text/plain; charset=UTF-8\r\n\r\n";
-
-        fwrite($fp, $headers . $message . "\r\n.\r\n");
-        $send($fp, "QUIT");
-        fclose($fp);
-
-        $log("Email sent successfully to $to");
-        return true;
-
-    } catch (Exception $e) {
-        $log("Exception in sendMailCLI: " . $e->getMessage());
-        return false;
-    }
+    return $status >= 200 && $status < 300;
 }

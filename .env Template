@@ -6,3 +6,4 @@ SMTP_PASS=
 FROM_EMAIL=HBAuctions@helsingkrona.se
 FROM_NAME=HB Auctions
 ADMIN_PASSWORD=
+API_SECRET=

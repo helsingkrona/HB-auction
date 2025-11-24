@@ -4,18 +4,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Load auctions from storage
   async function loadAuctions() {
-    // Load ALL auctions, not just active ones
-    const data = await storage.getAllAuctions();
+    // Load active auctions
+    const data = await storage.getActiveAuctions();
     auctions = data || [];
+
+    // Ensure each auction has a highestBid
+    auctions.forEach((a) => {
+      if (a.highestBid === undefined || a.highestBid === null) {
+        a.highestBid = a.startingBid || 0;
+      }
+    });
 
     // Sort: active first, ended last
     auctions.sort((a, b) => {
       const aEnded = storage.hasEnded(a);
       const bEnded = storage.hasEnded(b);
-
       if (aEnded && !bEnded) return 1;
       if (!aEnded && bEnded) return -1;
-
       return 0;
     });
 
@@ -54,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (timeRemaining === "Ended") {
       element.classList.add("ended");
       clearInterval(countdownIntervals[auctionId]);
-      loadAuctions(); // Reload to update display
+      loadAuctions();
     }
   }
 
@@ -70,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (auctions.length === 0) {
       grid.innerHTML =
-        '<p class="no-auctions">No auctions available at the moment.</p>';
+        '<p class="no-auctions" style="text-align: center">No auctions available at the moment.</p>';
       return;
     }
 
@@ -82,16 +87,20 @@ document.addEventListener("DOMContentLoaded", () => {
       card.className = `auction-card ${hasEnded ? "ended" : ""}`;
 
       const countdownId = `countdown-${auction.id}`;
+      const highestBid = Number(auction.highestBid ?? auction.startingBid ?? 0);
+      const imgSrc = auction.image
+        ? "/" + auction.image
+        : "/resources/images/default.png";
 
       card.innerHTML = `
-            <img src="${auction.image}" alt="${auction.title}">
+            <img src="${imgSrc}" alt="${auction.title}">
             <div class="auction-info">
                 <h3>${auction.title}</h3>
                 <p class="description">${auction.description.substring(
                   0,
                   100
                 )}...</p>
-                <p class="highest-bid">Highest Bid: ${auction.highestBid.toLocaleString(
+                <p class="highest-bid">Highest Bid: ${highestBid.toLocaleString(
                   "sv-SE",
                   { style: "currency", currency: "SEK" }
                 )}</p>
@@ -100,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     ? `<p class="time-remaining ${hasEnded ? "ended" : ""}">
                          <strong>${
                            hasEnded ? "⏰ Ended" : "⏱️ Time Remaining"
-                         }:</strong> 
+                         }:</strong>
                          <span id="${countdownId}">${
                         hasEnded
                           ? "Auction Ended"
@@ -124,24 +133,20 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
         `;
       grid.appendChild(card);
-
-      // Set up countdown interval if auction has end time and hasn't ended
+      // Set up countdown interval
       if (auction.endTime && !hasEnded) {
         countdownIntervals[auction.id] = setInterval(() => {
           updateCountdown(auction.id, countdownId);
         }, 1000);
-
-        // Initial update
         updateCountdown(auction.id, countdownId);
       }
 
-      // Click anywhere on the card to open details
+      // Click anywhere on card to open details
       card.addEventListener("click", (e) => {
         if (!e.target.classList.contains("bid-btn")) {
           showDetail(auction.id);
         }
       });
-
       // Place Bid button
       if (!hasEnded) {
         card.querySelector(".bid-btn").addEventListener("click", (e) => {
@@ -163,9 +168,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const content = document.getElementById("detailContent");
     content.innerHTML = `
             <h2>${auction.title}</h2>
-            <img src="${auction.image}" alt="${
-      auction.title
-    }" class="detail-image">
+            <img src="${
+              auction.image
+                ? "/" + auction.image
+                : "/resources/images/default.png"
+            }" alt="${auction.title}" class="detail-image">
             <p><strong>Description:</strong> ${auction.description}</p>
             <p><strong>Current Highest Bid:</strong> ${auction.highestBid.toLocaleString(
               "sv-SE",
@@ -212,7 +219,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("detailModal").style.display = "none";
   }
 
-  // Show bid modal
   function showBidModal(auctionId) {
     const auction = auctions.find((a) => a.id === auctionId);
     if (!auction) return;
@@ -221,7 +227,6 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("This auction has ended. Bidding is closed.");
       return;
     }
-
     document.getElementById("bidAuctionId").value = auctionId;
     document.getElementById("bidAmount").min = auction.highestBid + 0.01;
     document.getElementById("bidAmount").value = (
@@ -252,12 +257,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       try {
-        // Use the storage.placeBid method which handles validation
         await storage.placeBid(auctionId, name, email, amount);
-
-        // Reload auctions to show updated data
         await loadAuctions();
-
         alert("Bid placed successfully!");
         closeBidModal();
       } catch (error) {

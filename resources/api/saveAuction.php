@@ -1,8 +1,10 @@
 <?php
 header('Content-Type: application/json');
-header('Access-Control-Allow-Origin: *');
-header('Access-Control-Allow-Headers: Content-Type');
+header('Access-Control-Allow-Origin: https://auctions.helsingkrona.se');
+header('Access-Control-Allow-Headers: Content-Type, Authorization');
 header('Access-Control-Allow-Methods: POST, OPTIONS');
+
+session_start();
 
 // Handle preflight requests
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
@@ -10,17 +12,80 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 }
 
 $storage = __DIR__ . '/../storage/auctions.json';
+
+// ----- Read auction payload -----
 $raw = file_get_contents('php://input');
 $incoming = json_decode($raw, true);
 
-if (!$incoming || !isset($incoming['id'])) {
+if (!$incoming) {
     http_response_code(400);
-    echo json_encode(['success' => false, 'error' => 'Invalid payload']);
+    echo json_encode(['success' => false, 'error' => 'Invalid JSON']);
     exit;
 }
 
-// Handle bulk replace (for delete operation)
+// Generate ID for new auctions
+if (!isset($incoming['id']) || $incoming['id'] === null || $incoming['id'] === "") {
+    $incoming['id'] = uniqid("auc_", true);
+}
+
+// ----- Detect if this is a bid-only update -----
+$isBidOnly = isset($incoming['bids']) && isset($incoming['highestBid']) && count($incoming) <= 2;
+
+// ----- Admin check (only required for non-bid updates) -----
+if (!$isBidOnly && !($_SESSION['is_admin'] ?? false)) {
+    http_response_code(403);
+    echo json_encode(["error" => "Unauthorized"]);
+    exit;
+}
+
+// ===== Base64 Image Upload =====
+if (!empty($incoming['imageBase64'])) {
+
+    $uploadDir = __DIR__ . '/../images/';
+    if (!is_dir($uploadDir))
+        mkdir($uploadDir, 0755, true);
+
+    $imageData = $incoming['imageBase64'];
+
+    if (!preg_match('/^data:(image\/[a-zA-Z0-9.+-]+);base64,(.*)$/', $imageData, $matches)) {
+        echo json_encode(['success' => false, 'error' => 'Invalid base64 image']);
+        exit;
+    }
+
+    $mime = $matches[1];
+    $base64 = $matches[2];
+    $imageBinary = base64_decode($base64);
+
+    if ($imageBinary === false) {
+        echo json_encode(['success' => false, 'error' => 'Failed to decode base64']);
+        exit;
+    }
+
+    $ext = explode('/', $mime)[1];
+    if ($ext === 'jpeg')
+        $ext = 'jpg';
+
+    $uniqueName = date('ymdHis') . '_' . uniqid() . '.' . $ext;
+    $filePath = $uploadDir . $uniqueName;
+
+    if (!file_put_contents($filePath, $imageBinary)) {
+        echo json_encode(['success' => false, 'error' => 'Failed to save image']);
+        exit;
+    }
+
+    // Save path for JSON
+    $incoming['image'] = 'resources/images/' . $uniqueName;
+    unset($incoming['imageBase64']);
+}
+
+// ----- Bulk replace support (admin only) -----
 if ($incoming['id'] === '__bulk_replace__' && isset($incoming['replaceAll'])) {
+    if (!($_SESSION['is_admin'] ?? false)) {
+        http_response_code(403);
+        echo json_encode(["error" => "Unauthorized"]);
+        exit;
+    }
+
     $fp = fopen($storage, 'c+');
     if (!$fp) {
         http_response_code(500);
@@ -40,7 +105,7 @@ if ($incoming['id'] === '__bulk_replace__' && isset($incoming['replaceAll'])) {
     exit;
 }
 
-// Read current auctions with locking
+// ----- Read current auctions -----
 $fp = fopen($storage, 'c+');
 if (!$fp) {
     http_response_code(500);
@@ -49,12 +114,13 @@ if (!$fp) {
 }
 
 flock($fp, LOCK_EX);
+rewind($fp);
 $contents = stream_get_contents($fp);
 $auctions = $contents ? json_decode($contents, true) : [];
 if (!$auctions)
     $auctions = [];
 
-// Find existing auction
+// ----- Find or update auction -----
 $index = null;
 for ($i = 0; $i < count($auctions); $i++) {
     if ($auctions[$i]['id'] === $incoming['id']) {
@@ -63,51 +129,32 @@ for ($i = 0; $i < count($auctions); $i++) {
     }
 }
 
-$notifyOutbid = false;
-$outbidInfo = null;
-
 if ($index === null) {
-    // New auction — push
-    $auctions[] = $incoming;
+    // New auction (admin only)
+    if (!$isBidOnly) {
+        $auctions[] = $incoming;
+
+    } else {
+        http_response_code(400);
+        echo json_encode(['success' => false, 'error' => 'Auction not found']);
+        exit;
+    }
 } else {
     $existing = $auctions[$index];
 
-    // Detect if bids array grew and if there is a previous highest bidder
-    $existingBids = isset($existing['bids']) ? $existing['bids'] : [];
-    $incomingBids = isset($incoming['bids']) ? $incoming['bids'] : [];
-
-    if (count($incomingBids) > count($existingBids)) {
-        // find previous highest (before incoming)
-        $prevHighest = null;
-        if (count($existingBids) > 0) {
-            $prevHighest = array_reduce($existingBids, function ($carry, $b) {
-                if ($carry === null || $b['amount'] > $carry['amount'])
-                    return $b;
-                return $carry;
-            });
-        }
-
-        // find new highest (from incoming)
-        $newHighest = null;
-        if (count($incomingBids) > 0) {
-            $newHighest = array_reduce($incomingBids, function ($carry, $b) {
-                if ($carry === null || $b['amount'] > $carry['amount'])
-                    return $b;
-                return $carry;
-            });
-        }
-
-        if ($prevHighest && $newHighest && $newHighest['email'] !== $prevHighest['email'] && $newHighest['amount'] > $prevHighest['amount']) {
-            $notifyOutbid = true;
-            $outbidInfo = ['prev' => $prevHighest, 'new' => $newHighest, 'auction' => $incoming['title'] ?? ''];
-        }
+    if ($isBidOnly) {
+        // Only update bids and highestBid
+        $existing['bids'] = $incoming['bids'];
+        $existing['highestBid'] = $incoming['highestBid'];
+    } else {
+        // Full update (admin)
+        $existing = $incoming;
     }
 
-    // replace
-    $auctions[$index] = $incoming;
+    $auctions[$index] = $existing;
 }
 
-// Truncate & write back
+// ----- Write back -----
 ftruncate($fp, 0);
 rewind($fp);
 fwrite($fp, json_encode($auctions, JSON_PRETTY_PRINT));
@@ -115,28 +162,4 @@ fflush($fp);
 flock($fp, LOCK_UN);
 fclose($fp);
 
-// If outbid notification needed, send email (fire-and-forget style)
-if ($notifyOutbid && $outbidInfo) {
-    // Build email payload
-    $to = $outbidInfo['prev']['email'];
-    $subject = "You have been outbid on {$outbidInfo['auction']}";
-    $message = "Hi {$outbidInfo['prev']['name']},\n\nYour bid has been outbid on the auction: {$outbidInfo['auction']}.\nThe new highest bid is {$outbidInfo['new']['amount']} SEK.\nIf you want to reclaim the lead, visit the auction and place a new bid.\n\n– Auction System";
-
-    // Try HTTP POST to sendMail.php
-    $scheme = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') ? 'https' : 'http';
-    $host = $_SERVER['HTTP_HOST'];
-    $sendEndpoint = $scheme . '://' . $host . '/resources/mail/sendMail.php';
-
-    // Do a non-blocking curl POST
-    $ch = curl_init($sendEndpoint);
-    curl_setopt($ch, CURLOPT_POST, true);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_TIMEOUT, 5);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode(["to" => $to, "subject" => $subject, "message" => $message]));
-    curl_setopt($ch, CURLOPT_HTTPHEADER, ["Content-Type: application/json"]);
-    curl_exec($ch);
-    curl_close($ch);
-}
-
 echo json_encode(['success' => true]);
-?>
